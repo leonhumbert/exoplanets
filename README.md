@@ -3,7 +3,7 @@
 
 This repo explores data by the NASA Kepler space telescope recollected over nine years.
 
-Two machine learning models were created and tested for classifying exoplanet candidates from the dataset. the classifier used are a random forest (rf), and a support vector machines(svm) .  Random forest reported better scores at all instances, with a final testing score for submition is 0.90. 
+Two machine learning models were created and tested for classifying exoplanet candidates from the dataset. The classifiers used are a random forest (rf), and a support vector machines(svm) .  Random forest reported better scores at all instances, with a final testing score for submition of 0.90. 
 
 ### Flow Process:
 1. Preprocessing, including dropping duplicates and na.
@@ -13,7 +13,7 @@ Two machine learning models were created and tested for classifying exoplanet ca
 
 ### Preprocessing
 
-* Performed claening and feature selection. 
+* Performed cleaning and feature selection. 
 * Used `MinMaxScaler` to scale the numerical data.
 * Separated the data into training and testing data.
 
@@ -24,9 +24,9 @@ Two machine learning models were created and tested for classifying exoplanet ca
 
 ### Results
 
-Scores for the rf model are detailed in Table 1 and for the SVM model in Table 2 below. In case of rf, I ran the model the 3 times. The first time, withought deleting features, the second time, after removing features, and the third time after cv tuning. The features elemination was done after ranking features, and the the top 10 largest scores used for cv tuning.
+Scores for the rf model are detailed in Table 1 and for the SVM model in Table 2 below. In case of rf, I ran the model 3 times. The first time, without deleting features, the second time, after removing features, and the third time, after cv tuning. Features were ranked, and the the top 10 largest were used for second run and cv tuning.
 
-I did not found a major difference among the test scores for before and after cv in the case of eliminating features.
+I did not found a major difference among the test scores for before and after cv after eliminating features.
 
 Table 1
  |Score|Before Removing Feautures| After Removing Features | After CV|            
@@ -43,7 +43,7 @@ Table 2
  |Testing Score  |0.841| 0.879|
 
 ### Summary
-Random forests are easier for exploring machine learning models building, training and tuning. In this exploratory analysis of the NASA dataset, results show that the rf model performed better than the svm model. I think this rf model might be used for the classification of the exoplanets at a 0.9 accuracy rate.
+I found random forests easier for exploring machine learning models, their building, training and tuning. In this exploratory analysis of the NASA dataset, results show that the rf model performed better than the svm model. I think this rf model might be used for the classification of the exoplanets at a 0.9 accuracy rate.
 
 
 ### Dataset
